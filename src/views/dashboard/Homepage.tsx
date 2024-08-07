@@ -4,9 +4,9 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 import React from 'react'
 export default function Homepage() {
   return (
-    <div className="p-6">
+    <div className="px-10">
       <h1 className="text-2xl font-bold text-slate-200 mb-6">HomePage</h1>
-      <Card className=" min-w-80 bg-slate-800 text-slate-200 s shadow-lg">
+      <Card className=" min-w-80 bg-slate-800 text-slate-200 border-[1px] border-[#CCD2DF] shadow-lg">
         <CardHeader className=" border-b-2 border-slate-400">
           <CardTitle className="text-md font-semibold">Choose Active Event</CardTitle>
         </CardHeader>
@@ -14,7 +14,7 @@ export default function Homepage() {
           <div className="space-y-1 p-2">
             <label htmlFor="event" className="text-md font-semibold text-slate-200">Select the event</label>
             <Select>
-              <SelectTrigger id="event" className="w-full bg-slate-700 border-slate-600">
+              <SelectTrigger id="event" className="w-full bg-slate-700  border-slate-600">
                 <SelectValue placeholder="ESE" />
               </SelectTrigger>
               <SelectContent className="bg-slate-700 text-slate-200 border-slate-600">

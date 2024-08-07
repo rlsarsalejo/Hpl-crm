@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Sidebar from '@/components/Navbars/Sidebar';
+import Header from '@/components/Navbars/Header'
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 
@@ -9,7 +10,9 @@ const AuthenticatedLayout: React.FC = () => {
   const location = useLocation();
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div>
+        <Header />
+          <div className="flex h-screen overflow-hidden">
       <Sidebar 
         className={`fixed inset-y-0 left-0 z-50 transform ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
@@ -24,11 +27,13 @@ const AuthenticatedLayout: React.FC = () => {
             <Menu className="h-6 w-6 text-slate-200" />
           </Button>
         </header>
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-slate-800">
+        <main className="flex-1  overflow-x-hidden overflow-y-auto bg-slate-800">
           <Outlet />
         </main>
       </div>
     </div>
+    </div>
+  
   );
 };
 
